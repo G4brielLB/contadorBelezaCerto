@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Aulas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Aulas</h1>
+        
+        <div id="registrationSection">
+            <form id="classForm">
+                <label for="className">Nome da Aula:</label>
+                <input type="text" id="className" required>
+                <button type="submit">Registrar Aula</button>
+            </form>
+        </div>
+
+        <div id="countingSection" style="display: none;">
+            <h2 id="currentClassName">Nome da Aula</h2>
+            <p id="currentDate">Data: </p>
+            
+            <div class="counter-container">
+                <div class="counter">
+                    <h3>Beleza: <span id="belezaValue">0</span></h3>
+                    <button id="incrementBeleza">+1 Beleza</button>
+                </div>
+                
+                <div class="counter">
+                    <h3>Certo: <span id="certoValue">0</span></h3>
+                    <button id="incrementCerto">+1 Certo</button>
+                </div>
+                
+                <div class="counter">
+                    <h3>Hehe: <span id="heheValue">0</span></h3>
+                    <button id="incrementHehe">+1 Hehe</button>
+                </div>
+            </div>
+            
+            <button id="finishClass" class="finish-btn">Finalizar Aula</button>
+        </div>
+
+        <div class="history-section">
+            <div class="dropdown">
+                <button id="historyBtn">Histórico de Aulas</button>
+                <div id="historyDropdown" class="dropdown-content">
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
